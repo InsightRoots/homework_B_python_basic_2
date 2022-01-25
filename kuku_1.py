@@ -5,7 +5,9 @@ print(2,2*2,2*3,2*4,2*5,2*6,2*7,2*8,2*9)
 # b*1,b*2・・・
 # もしくはa+1？
 
-
 multi_dan = [1,2,3,4,5,6,7,8,9]
-multi_kake = [1,2,3,4,5,6,7,8,9]
-print(multi_dan)
+# multi_kake = [1,2,3,4,5,6,7,8,9]
+for dan in multi_dan :
+    print(dan,dan*2,dan*3,dan*4,dan*5,dan*6,dan*7,dan*8,dan*9)
+
+# これでいいのか？繰り返しているのだからできるはず。
