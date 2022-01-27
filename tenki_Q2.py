@@ -1,3 +1,5 @@
+# Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
+
 def main():
     weather_information = [
         {'prefecture': '東京都', 'station': '渋谷', 'temperature': 6.5},
@@ -12,14 +14,11 @@ def main():
         {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
     ]
     for wi in weather_information:
-        print(wi['temperature'])
+        if 'prefecture' == '大阪府':
+            print(wi)
+
+# やりたいことは、辞書の中から、'prefecture'かつ大阪府を取り出し、さらに、'station'を出力させる
+# if 文を使えばいいのか。書き方が全くわからない。腹立たしい。
 
 if __name__ == "__main__":
     main()
-
-# 複数の辞書から、特定のKeyから値を取り出し、さらに合計を出す。ここがわからない。
-# 出た結果をSumにすると、folat扱いになる。よって、intにしてもエラーになる。この先がわからない。
-
-
-
-

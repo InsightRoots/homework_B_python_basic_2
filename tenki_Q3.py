@@ -12,14 +12,9 @@ def main():
         {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
     ]
     for wi in weather_information:
-        print(wi['temperature'])
+            print(wi['prefecture'])
+
+# Q1,Q2の合わせたやり方なのはわかる。解けていないからわからない。
 
 if __name__ == "__main__":
     main()
-
-# 複数の辞書から、特定のKeyから値を取り出し、さらに合計を出す。ここがわからない。
-# 出た結果をSumにすると、folat扱いになる。よって、intにしてもエラーになる。この先がわからない。
-
-
-
-
