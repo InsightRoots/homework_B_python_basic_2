@@ -11,12 +11,14 @@ def main():
         {'prefecture': '福岡県', 'station': '博多', 'temperature': 13.0},
         {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
     ]
-    wi = weather_information.items()
-    print(wi)
+    for wi in weather_information:
+        zen = wi['temperature']
+        print(sum(zen))
 
 if __name__ == "__main__":
     main()
 
 # 複数の辞書から、特定のKeyから値を取り出し、さらに合計を出す。ここがわからない。
+# 特定の数値を取り出すことが出来た。しかし、それがfloatである、と。それをintに変えてもSumできない。どうやったらいいかわからない。
 
 
