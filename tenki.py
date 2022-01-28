@@ -1,3 +1,6 @@
+import decimal
+from decimal import Decimal
+
 def main():
     weather_information = [
         {'prefecture': '東京都', 'station': '渋谷', 'temperature': 6.5},
@@ -12,14 +15,13 @@ def main():
         {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
     ]
     for wi in weather_information:
-        print(wi['temperature'])
+        a=Decimal(wi['temperature'])
+        sum(a)
 
 if __name__ == "__main__":
     main()
 
 # 複数の辞書から、特定のKeyから値を取り出し、さらに合計を出す。ここがわからない。
 # 出た結果をSumにすると、folat扱いになる。よって、intにしてもエラーになる。この先がわからない。
-
-
-
+# sumが小数点を正確に計算できないため、decimalをつかう、ということはわかった。この先がわからん、、、、。
 
