@@ -14,9 +14,35 @@ def main():
         {'prefecture': '福岡県', 'station': '博多', 'temperature': 13.0},
         {'prefecture': '福岡県', 'station': '太宰府', 'temperature': 15.0},
     ]
-    for wi in weather_information:
-        a=Decimal(wi['temperature'])
-        sum(a)
+
+#1 全国の平均気温。どうしようもないので、すでに提出されている方のコードを参照
+    ab = [temperature.get('temperature') for temperature in weather_information]
+    # print(ab)
+    count = len(weather_information)
+    # print(count)
+    print(sum(ab)/count)
+
+#2　大阪府のすべての駅名をカンマ区切りで出力 ※コード参照
+    oosaka = [x for x in weather_information if x['prefecture'] == '大阪府']
+    # print(oosaka)
+    get_oosaka_station = [station.get('station') for station in oosaka]
+    print(get_oosaka_station)
+
+# Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+    fuku = [x for x in weather_information if x['prefecture'] == '福岡県']
+    # print(fuku)
+    fuku_kion = [prefecture.get('temperature') for prefecture in fuku]
+    # print(fuku_kion)
+    fuku_count = len(fuku_kion)
+    # print(fuku_count)
+    kotae = sum(fuku_kion)/fuku_count
+    print(kotae)
+
+    # count_fuku = len([x for x in weather_information if x['prefecture'] == '福岡県'])
+    # print(count_fuku)
+
+    'temperature'
+
 
 if __name__ == "__main__":
     main()
@@ -25,3 +51,6 @@ if __name__ == "__main__":
 # 出た結果をSumにすると、folat扱いになる。よって、intにしてもエラーになる。この先がわからない。
 # sumが小数点を正確に計算できないため、decimalをつかう、ということはわかった。この先がわからん、、、、。
 
+# Q1. 全国の平均気温を計算してください(9.5となればOK)
+# Q2. 大阪府のすべての駅名をカンマ区切りで出力してください( '梅田,大阪,堺' となればOK)
+# Q3. 福岡県の平均気温を計算してください(14.0となればOK)
